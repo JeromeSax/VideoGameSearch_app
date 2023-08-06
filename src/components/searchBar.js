@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-const searchBar = () => {
+const SearchBar = () => {
 
     const [searchInput, setSearchInput] = useState("");
+    const videogames = [];
 }
 
-export default searchBar
+export default SearchBar
