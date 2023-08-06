@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-function searchBar() {
-  return (
-    <div>searchBar</div>
-  )
+const searchBar = () => {
+
+    const [searchInput, setSearchInput] = useState("");
 }
 
 export default searchBar
