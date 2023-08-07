@@ -1,6 +1,16 @@
 import React from "react";
 import SearchBar from './components/searchBar';
 import { useState, useEffect } from 'react';
+import "./App.css";
+
+const Container = styled.div`
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background-color: Black;
+  font-size: 14px;
+  border-radius: 10px 10px 0 0;
+`
 
 function App() {
 
@@ -26,8 +36,10 @@ useEffect(() => {
 
   return (
     <div>
-      Hello world!
+      <Container className="App">
+      <h1>Hello world!</h1>
       <SearchBar />
+      </Container>
     </div>
   );
 }
