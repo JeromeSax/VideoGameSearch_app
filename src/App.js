@@ -10,20 +10,19 @@ const Container = styled.div`
   text-align: center;
   background-color: lightgreen;
   font-size: 14px;
-  color: White;
   border-radius: 10px 10px 0 0;
 `
 
 function App() {
 
-const APIKEY = '9506c29c54mshdfecaae160925a7p15dc51jsn9863a6a8ce1e'
+const apiKey = '9506c29c54mshdfecaae160925a7p15dc51jsn9863a6a8ce1e'
 const [game, setGame] = useState(null)
 
 const getGame = async (searchTerm) => {
   try {
-    const response = await fetch(`https://opencritic-api.p.rapidapi.com/?APIKEY=${APIKEY}&t=${searchTerm}`)
+    const response = await fetch(`https://opencritic-api.p.rapidapi.com/game/search?apikey=${apiKey}&t=${searchTerm}criteria=the%20evil%20within`)
     const data = await response.json();
-    // console.log(data)
+    console.log(data)
     setGame(data)
 
   } catch (error) {
