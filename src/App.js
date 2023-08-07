@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "./components/Form";
 import SearchBar from './components/searchBar';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';

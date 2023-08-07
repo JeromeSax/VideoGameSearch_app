@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { StyledForm } from "./styles/Form.styled";
 
 function Form({videogameSearch}) {
 
@@ -25,7 +26,8 @@ function Form({videogameSearch}) {
 return (
     <div>
         <StyledForm onSubmit={handleSubmit}>
-            
+            <input type="text" value={form.searchTerm} onChange={handleChange} />
+            <input type="submit" value="search" />
         </StyledForm>
     </div>
 )
