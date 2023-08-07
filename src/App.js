@@ -1,6 +1,5 @@
 import React from "react";
 import Form from "./components/Form";
-import SearchBar from './components/searchBar';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import "./App.css";
@@ -17,12 +16,12 @@ const Container = styled.div`
 
 function App() {
 
-const APIKEY = ''
+const APIKEY = '9506c29c54mshdfecaae160925a7p15dc51jsn9863a6a8ce1e'
 const [game, setGame] = useState(null)
 
 const getGame = async (searchTerm) => {
   try {
-    const response = await fetch(``)
+    const response = await fetch(`https://opencritic-api.p.rapidapi.com/?APIKEY=${APIKEY}&t=${searchTerm}`)
     const data = await response.json();
     // console.log(data)
     setGame(data)
@@ -40,8 +39,7 @@ useEffect(() => {
   return (
     <div>
       <Container className="App">
-        <h1>Hello world!</h1>
-        <SearchBar />
+        <h1>Game Finder+</h1>
         <Form videogameSearch={getGame} />
       </Container>
     </div>
