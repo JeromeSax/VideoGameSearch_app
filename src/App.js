@@ -22,7 +22,7 @@ const getGame = async (searchTerm) => {
   try {
     const response = await fetch(`https://opencritic-api.p.rapidapi.com/game/search?apikey=${apiKey}&t=${searchTerm}criteria=the%20evil%20within`)
     const data = await response.json();
-    console.log(data)
+    // console.log(data)
     setGame(data)
 
   } catch (error) {
