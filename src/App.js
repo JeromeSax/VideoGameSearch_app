@@ -41,6 +41,7 @@ useEffect(() => {
       <Container className="App">
         <h1>Hello world!</h1>
         <SearchBar />
+        <Form videogameSearch={getGame} />
       </Container>
     </div>
   );
