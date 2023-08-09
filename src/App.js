@@ -142,8 +142,9 @@ const handleSubmit = (e) => {
         <h1>Game Finder+</h1>
         <Form  handleSubmit={handleSubmit} handleChange={handleChange} form={form} />
         <VideogameDisplay game={game} />
+        <Footer />
       </Container>
-      <Footer />
+      
     </div>
   );
 }
