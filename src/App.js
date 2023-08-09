@@ -13,7 +13,11 @@ const Container = styled.div`
   background-color: lightgreen;
   font-size: 14px;
   border-radius: 10px 10px 10px 10px;
-  border: 5px solid red;
+  box-shadow:  0 0 20px #FF0000, 0 0 10px #0000FF;
+
+  h1 {
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  }
 `
 
 function App() {
@@ -142,8 +146,8 @@ const handleSubmit = (e) => {
         <h1>Game Finder+</h1>
         <Form  handleSubmit={handleSubmit} handleChange={handleChange} form={form} />
         <VideogameDisplay game={game} />
-        <Footer />
       </Container>
+      <Footer />
       
     </div>
   );
