@@ -3,6 +3,7 @@ import Form from "./components/Form";
 import VideogameDisplay from "./components/VideogameDisplay";
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Footer from "./components/Footer"
 import "./App.css";
 
 const Container = styled.div`
@@ -142,6 +143,7 @@ const handleSubmit = (e) => {
         <Form  handleSubmit={handleSubmit} handleChange={handleChange} form={form} />
         <VideogameDisplay game={game} />
       </Container>
+      <Footer />
     </div>
   );
 }
