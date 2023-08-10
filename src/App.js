@@ -14,7 +14,7 @@ const Container = styled.div`
   font-size: 12px;
   border-radius: 10px 10px 10px 10px;
   box-shadow:  0 0 20px #FF0000, 0 0 10px #0000FF;
-  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  text-shadow: 0 0 2px #FF0000, 0 0 6px #0000FF;
   
 `
 
@@ -24,7 +24,8 @@ function App() {
     searchTerm: ''
 });
 
-  const [game, setGame] = useState([])
+  const [game, setGame] = useState([]);
+  const [review, setReview] = useState([]);
 
   const getGames = async (searchTerm) => {
     
@@ -48,6 +49,8 @@ function App() {
     }
     // console.log(game)
   }
+
+  
 
 
   // useEffect(() => {

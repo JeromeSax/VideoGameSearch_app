@@ -19,7 +19,7 @@ function VideogameDisplay({game}) {
 return (
     game.map((game, index) => {
       return (
-        <ul>
+        <ul key={index}>
           <li>{game.name}</li>
         </ul>
       )

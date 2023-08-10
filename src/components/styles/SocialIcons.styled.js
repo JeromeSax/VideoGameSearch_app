@@ -13,13 +13,13 @@ export const StyledSocialIcons = styled.div`
     a {
     border: 1px solid purple;
     border-radius: 50%;
-    color: purple;
+    color: black;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-right: 10px;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     text-decoration: none;
     }
 
