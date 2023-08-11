@@ -5,6 +5,7 @@ import ReviewsDisplay from "./components/ReviewsDisplay";
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Footer from "./components/Footer"
+import controllerImage from './components/img/controller.png';
 import "./App.css";
 
 const Container = styled.div`
@@ -26,8 +27,8 @@ function App() {
 });
 
   const [game, setGame] = useState([]);
-  // const [gameId, setGameId] = useState([]);
   const [reviews, setReviews] = useState([]);
+  
 
   const getGames = async (searchTerm) => {
     const url = `https://opencritic-api.p.rapidapi.com/game/search?criteria=${searchTerm}`;
@@ -75,7 +76,8 @@ const getGameReviews = async (gameId) => {
 
   // useEffect(() => {
   //   getGames()
-  // }, [])
+  // }, []);
+
 
 
  
@@ -90,17 +92,16 @@ const handleChange = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    getGames();
-    getGameReviews();
+    getGames(form.searchTerm);
     form.searchTerm= "";
 }
-
-
 
   return (
     <div>
       <Container className="App">
+        <img src={controllerImage} alt="Game Controller" className="controller-image" />
         <h1>Game Finder+</h1>
+        <img src={controllerImage} alt="Game Controller" className="controller-image" />
         <Form  handleSubmit={handleSubmit} handleChange={handleChange} form={form} />
         <VideogameDisplay game={game}  />
         <ReviewsDisplay reviews={reviews} />

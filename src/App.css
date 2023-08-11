@@ -1,3 +1,10 @@
  .App {
     background-color: lightgreen;
 }
+
+.controller-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+}
