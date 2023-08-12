@@ -1,10 +1,43 @@
  .App {
-    background-color: lightgreen;
+    background-color: rgb(38, 2, 29);
+}
+
+.background-image {
+    background-image: url('../src/components/img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-container {
+    display: flex; 
+    align-items: center
+}
+
+.header-1 {
+    font-size: 40px;
 }
 
 .controller-image {
-    width: 50px;
+    width: 100px;
     height: auto;
     margin-right: 10px;
     margin-left: 10px;
+    background: white;
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.footer-container {
+    background-image: url('../src/components/img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
