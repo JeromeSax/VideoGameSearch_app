@@ -8,7 +8,7 @@ const ReviewsDisplay = ({ reviews }) => {
                 {reviews.map((review, index) => (
                     <li key={index}>
                         <p>{review.score}</p>
-                        <p>{review.author}</p>
+                        <p>{review.Authors[0].name}</p>
                         <p>{review.snippet}</p>
                     </li>
                 ))}

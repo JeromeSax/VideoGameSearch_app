@@ -29,8 +29,9 @@ function App() {
 
   const [game, setGame] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const [selectedGame, setSelectedGame] = useState(null); 
   
-
+// function that fetches game based on the search term
   const getGames = async (searchTerm) => {
     const url = `https://opencritic-api.p.rapidapi.com/game/search?criteria=${searchTerm}`;
     const options = {
@@ -42,15 +43,17 @@ function App() {
     };
 
     try {
+      // the fetch code
       const response = await fetch(url, options);
       const result = await response.json();
       console.log(result);
       if (result) {
-        // setGame(result);
+        setGame(result);
       } else {
         alert("I have went over the limit")
       }
     } catch (error) {
+      // error handling
       alert("I have went over the limit")
       console.error(error);
     }
@@ -59,7 +62,7 @@ function App() {
 
 // Function to fetch reviews for a specific game
 const getGameReviews = async (gameId) => {
-  console.log(typeof gameId)
+  console.log("Fetching reviews for gameId:", gameId)
   const url = `https://opencritic-api.p.rapidapi.com/reviews/game/${gameId}?skip=20`;
   const options = {
     method: "GET",
@@ -72,9 +75,11 @@ const getGameReviews = async (gameId) => {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(result);
-    if (result) {
-      setReviews(result);
+    console.log("Reviews:",result);
+    // Access the reviews property
+    if (result.reviews) {
+      // set the reviews state
+      setReviews(result.reviews);
     } else {
       alert("I have went over the limit")
     }
@@ -86,7 +91,7 @@ const getGameReviews = async (gameId) => {
 
 
   // useEffect(() => {
-  //   getGames()
+  //   getGames('Resident evil 4')
   // }, []);
 
 
@@ -94,17 +99,33 @@ const getGameReviews = async (gameId) => {
  
 
 const handleChange = (e) => {
-    // console.log(e.target.value)
     setForm ({
         ...form,
         searchTerm: e.target.value
     })
 }
 
+// handles search form submission
 const handleSubmit = (e) => {
     e.preventDefault();
     getGames(form.searchTerm);
     form.searchTerm= "";
+}
+
+// handles game selection and fetch reviews
+const handleGameClick = async (game) => {
+  setSelectedGame(game);
+  try {
+    const reviewResult = await getGameReviews(game.id);
+    if (reviewResult) {
+      setReviews(reviewResult);
+    } else {
+      alert("No reviews available for this game.")
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error fetching reviews.");
+  }
 }
 
   return (
@@ -117,8 +138,8 @@ const handleSubmit = (e) => {
         <img src={controllerImage} alt="Game Controller" className="controller-image" />
         </div>
         <Form  handleSubmit={handleSubmit} handleChange={handleChange} form={form} />
-        <VideogameDisplay game={game}  />
-        <ReviewsDisplay reviews={reviews} />
+        <VideogameDisplay game={game} handleGameClick={handleGameClick} />
+        {selectedGame && <ReviewsDisplay reviews={reviews} />}
         </div>
         <Footer className="footer-container"/>
       </Container>
