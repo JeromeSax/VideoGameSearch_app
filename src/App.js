@@ -10,7 +10,7 @@ import "./App.css";
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 500px;
   margin: auto;
   color: white;
   text-align: center;
@@ -32,56 +32,56 @@ function App() {
   
 
   const getGames = async (searchTerm) => {
-    // const url = `https://opencritic-api.p.rapidapi.com/game/search?criteria=${searchTerm}`;
-    // const options = {
-    //   method: 'GET',
-    //   headers: {
-    //     'X-RapidAPI-Key': '9506c29c54mshdfecaae160925a7p15dc51jsn9863a6a8ce1e',
-    //     'X-RapidAPI-Host': 'opencritic-api.p.rapidapi.com'
-    //   }
-    // };
+    const url = `https://opencritic-api.p.rapidapi.com/game/search?criteria=${searchTerm}`;
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '9506c29c54mshdfecaae160925a7p15dc51jsn9863a6a8ce1e',
+        'X-RapidAPI-Host': 'opencritic-api.p.rapidapi.com'
+      }
+    };
 
-    // try {
-    //   const response = await fetch(url, options);
-    //   const result = await response.json();
-    //   console.log(result);
-    //   if (result) {
-    //     // setGame(result);
-    //   } else {
-    //     alert("I have went over the limit")
-    //   }
-    // } catch (error) {
-    //   alert("I have went over the limit")
-    //   console.error(error);
-    // }
-    // console.log(game)
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      console.log(result);
+      if (result) {
+        // setGame(result);
+      } else {
+        alert("I have went over the limit")
+      }
+    } catch (error) {
+      alert("I have went over the limit")
+      console.error(error);
+    }
+    console.log(game)
   }
 
 // Function to fetch reviews for a specific game
 const getGameReviews = async (gameId) => {
-  // console.log(typeof gameId)
-  // const url = `https://opencritic-api.p.rapidapi.com/reviews/game/${gameId}?skip=20`;
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     'X-RapidAPI-Key': '9506c29c54mshdfecaae160925a7p15dc51jsn9863a6a8ce1e',
-  //     'X-RapidAPI-Host': 'opencritic-api.p.rapidapi.com'
-  //   }
-  // };
+  console.log(typeof gameId)
+  const url = `https://opencritic-api.p.rapidapi.com/reviews/game/${gameId}?skip=20`;
+  const options = {
+    method: "GET",
+    headers: {
+      'X-RapidAPI-Key': '9506c29c54mshdfecaae160925a7p15dc51jsn9863a6a8ce1e',
+      'X-RapidAPI-Host': 'opencritic-api.p.rapidapi.com'
+    }
+  };
 
-  // try {
-  //   const response = await fetch(url, options);
-  //   const result = await response.json();
-  //   console.log(result);
-  //   if (result) {
-  //     setReviews(result);
-  //   } else {
-  //     alert("I have went over the limit")
-  //   }
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+    if (result) {
+      setReviews(result);
+    } else {
+      alert("I have went over the limit")
+    }
   
-  // } catch (error) {
-  //   console.error(error);
-  // }
+  } catch (error) {
+    console.error(error);
+  }
 } 
 
 

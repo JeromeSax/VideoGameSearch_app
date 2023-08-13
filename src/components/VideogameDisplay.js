@@ -17,10 +17,10 @@ function VideogameDisplay({game}) {
 // return game ? loaded() : loading()
 
 return (
-    game.map((oneGame, index) => {
+    game.map((game, index) => {
       return (
         <ul key={index}>
-          <li>{oneGame.name}</li>
+          <li>{game.name}</li>
         </ul>
       )
     }

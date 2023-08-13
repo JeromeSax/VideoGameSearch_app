@@ -14,6 +14,7 @@ export default function Footer() {
                     <li>Contact Us</li>
                 </ul>
                 <SocialIcons />
+                <p>&copy; 2023 Romey-Rome Games. All rights reserved</p>
             </Container>
         </StyledFooter>
     )

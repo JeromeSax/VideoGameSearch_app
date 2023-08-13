@@ -3,7 +3,7 @@ import React from 'react';
 const ReviewsDisplay = ({ reviews }) => {
     return (
         <div>
-            <h2>Reviews</h2>
+            <h1>Reviews</h1>
             <ul>
                 {reviews.map((review, index) => (
                     <li key={index}>

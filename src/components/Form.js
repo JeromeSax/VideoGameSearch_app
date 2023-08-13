@@ -2,35 +2,24 @@ import React from 'react';
 import { useState } from 'react';
 import { StyledForm } from "./styles/Form.styled";
 
-function Form({form, videogameSearch, handleSubmit, handleChange}) {
+function Form({form, handleSubmit, handleChange}) {
 
 
-    // const [form, setForm] = useState({
-    //     searchTerm: ''
-    // });
+  
 
-    // const handleChange = (e) => {
-    //     console.log(e.target.value)
-    //     setForm ({
-    //         ...form,
-    //         searchTerm: e.target.value
-    //     })
-    // }
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     videogameSearch(form.searchTerm);
-    //     form.searchTerm= "";
-    // }
-
-return (
-    <div>
-        <StyledForm onSubmit={handleSubmit}>
-            <input type="text" value={form.searchTerm} onChange={handleChange} />
-            <input type="submit" value="search" />
-        </StyledForm>
-    </div>
-)
+    return (
+        <div>
+            <StyledForm onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={form.searchTerm}
+                    onChange={handleChange}
+                    placeholder="Find a game..."
+                />
+                <input type="submit" value="Search" />
+            </StyledForm>
+        </div>
+    )
 }
 
 export default Form;
