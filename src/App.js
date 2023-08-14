@@ -29,7 +29,7 @@ function App() {
 
   const [game, setGame] = useState([]);
   const [reviews, setReviews] = useState([]);
-  const [selectedGame, setSelectedGame] = useState(null); 
+  const [selectedGame, setSelectedGame] = useState([]); 
   
 // function that fetches game based on the search term
   const getGames = async (searchTerm) => {
@@ -90,9 +90,9 @@ const getGameReviews = async (gameId) => {
 } 
 
 
-  // useEffect(() => {
-  //   getGames('Resident evil 4')
-  // }, []);
+  useEffect(() => {
+    getGames("")
+  }, []);
 
 
 

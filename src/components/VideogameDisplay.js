@@ -13,13 +13,13 @@ return (
       {game.length > 0 ? (
         <ul>
           {game.map((singleGame, index) => (
-            <li key={index} >{singleGame.name}</li>
+            <ol className="list-text" key={index} >{singleGame.name}</ol>
           ))}
         </ul>
       ) : (
         <p>No games to display</p>
       )}
-      <button onClick={handleButtonClick}>Find what you were looking for?</button>
+      <button className="button-1"onClick={handleButtonClick}>Find what you were looking for?</button>
     </div>
   );
 }

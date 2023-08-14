@@ -10,6 +10,38 @@
     box-shadow:  0 0 20px #FF0000, 0 0 10px #0000FF;
 }
 
+.background-2 {
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+
+.footer-text {
+    margin-left: 25%;
+}
+
+.copyright-text {
+    margin-left: 32%;
+}
+
+.button-1 {
+    background-color:#ff8000;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 20px;
+
+}
+
+.button-2 {
+    background-color:#ff8000;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 20px;
+    
+}
+
+.list-text {
+    font-size: 25px;
+    text-align: center;
+    margin-right: 7%;
+}
 
 .header-container {
     display: flex; 
@@ -18,12 +50,14 @@
 }
 
 .header-1 {
-    font-size: 40px;
+    font-size: 50px;
+    margin-bottom: 20%;
 }
 
 .controller-image {
     width: 100px;
     height: auto;
+    margin-bottom: 20%;
     margin-right: 10px;
     margin-left: 10px;
     background: white;
@@ -41,8 +75,3 @@
     }
 }
 
-.footer-container {
-    background-image: url('../src/components/img/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}

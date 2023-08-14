@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Video Game Review Finder App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Video Game Review Finder App is a web application that allows users to search for their favorite video games and view reviews, authors, and scores for those games. The app utilizes the OpenCritic API to retrieve game data and reviews, providing users with valuable insights into their desired video games.
 
-## Available Scripts
+## Purpose
 
-In the project directory, you can run:
+The main purpose of this app is to provide a convenient way for users to find information about video games, including reviews, authors, and scores. By utilizing the OpenCritic API, users can search for specific games and access critical reviews from various sources, helping them make informed decisions about their gaming choices.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Search for video games using keywords or titles.
+- View a list of matching games along with their names.
+- Click on a game to see detailed information, including reviews, authors, and scores.
+- Explore reviews from different authors to get a well-rounded perspective on a game's quality.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Challenges Faced
 
-### `npm test`
+During the development of this app, several challenges were encountered:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **API Integration:** The initial challenge was integrating the OpenCritic API for both game search and reviews. The process involved experimenting with API endpoints and handling data retrieval.
 
-### `npm run build`
+2. **Data Display:** Displaying the retrieved data, including reviews and author information, required careful handling of the JSON responses and mapping them to appropriate UI components.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Debugging:** Debugging was crucial to identify and resolve issues related to data fetching, rendering, and state management.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Styling:** Designing an appealing user interface with appropriate styling was another challenge. The app's layout and visual elements were enhanced with free resources from flaticon.com and freepik.com.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Ongoing Work
 
-### `npm run eject`
+The app is a work in progress, and the development team is actively working on the following:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Displaying Reviews:** I am working on resolving the issue related to displaying reviews on the screen. Efforts are being made to ensure that the reviews, authors, and scores are correctly displayed for each game.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Sound Effects:** Additional features, such as adding sound effects to buttons, are being implemented to enhance the user experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To use the Video Game Review Finder App, follow these steps:
 
-## Learn More
+1. Clone the repository to your local machine.
+2. Install the required dependencies using `npm install`.
+3. Run the app using `npm start`.
+4. Open a web browser and navigate to the provided URL to access the app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Video Game Review Finder App is made possible by the integration of the OpenCritic API and the use of free resources from flaticon.com and freepik.com for visual elements.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contribute to the app's development by addressing the challenges, adding new features, or improving existing functionality. Your contributions are greatly appreciated!

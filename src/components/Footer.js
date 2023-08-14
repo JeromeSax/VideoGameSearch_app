@@ -1,20 +1,20 @@
 import SocialIcons from "./SocialIcons";
 import { Container } from "./styles/Container.styled";
 import { StyledFooter } from "./styles/Footer.styled";
+import backgroundImg from "./img/background.jpg";
 
 
 export default function Footer() {
     return (
-        <StyledFooter>
+        <StyledFooter className="background-2"style={{backgroundImage: `url(${backgroundImg})` }}>
             <Container>
-                <img />
-                <ul>
-                    <li>About us</li>
-                    <li>FAQ</li>
-                    <li>Contact Us</li>
+                <ul className="footer-text">
+                    <ol>About us</ol>
+                    <ol>FAQ</ol>
+                    <ol>Contact Us</ol>
                 </ul>
                 <SocialIcons />
-                <p>&copy; 2023 Romey-Rome Games. All rights reserved</p>
+                <p className="copyright-text">&copy; 2023 Romey-Rome Games. All rights reserved</p>
             </Container>
         </StyledFooter>
     )

@@ -4,6 +4,7 @@ export const StyledSocialIcons = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 34%;
     
 
     li {
@@ -11,7 +12,7 @@ export const StyledSocialIcons = styled.div`
     }
 
     a {
-    border: 1px solid purple;
+    border: 3px solid purple;
     border-radius: 50%;
     color: white;
     display: inline-flex;
