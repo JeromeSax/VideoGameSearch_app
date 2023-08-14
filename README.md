@@ -19,7 +19,7 @@ During the development of this app, several challenges were encountered:
 
 1. **API Integration:** The initial challenge was integrating the OpenCritic API for both game search and reviews. The process involved experimenting with API endpoints and handling data retrieval.
 
-2. **Data Display:** Displaying the retrieved data, including reviews and author information, required careful handling of the JSON responses and mapping them to appropriate UI components.
+2. **Data Display:** Displaying the retrieved data, including reviews and author information was a challenge. Ultimately the problem was solved by troubleshooting errors.
 
 3. **Debugging:** Debugging was crucial to identify and resolve issues related to data fetching, rendering, and state management.
 
