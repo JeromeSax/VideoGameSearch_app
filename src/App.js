@@ -137,8 +137,11 @@ const handleGameClick = async (game) => {
         <h1 className="header-1">Game Finder+</h1>
         <img src={controllerImage} alt="Game Controller" className="controller-image" />
         </div>
+        {/* Allows users to search for games */}
         <Form  handleSubmit={handleSubmit} handleChange={handleChange} form={form} />
+        {/* display list of video games */}
         <VideogameDisplay game={game} handleGameClick={handleGameClick} />
+        {/* display reviews if a game is selected */}
         {selectedGame && <ReviewsDisplay reviews={reviews} />}
         </div>
         <Footer className="footer-container"/>

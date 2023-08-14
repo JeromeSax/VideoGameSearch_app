@@ -9,13 +9,16 @@ function VideogameDisplay({game}) {
 
 return (
     <div>
-      <h1>Game List</h1>
+      <h1 className='header-1'>Game List</h1>
+      {/* check if there are games available */}
       {game.length > 0 ? (
         <ul>
           {game.map((singleGame, index) => (
+            // maps through games and displays them
             <ol className="list-text" key={index} >{singleGame.name}</ol>
           ))}
         </ul>
+        // if else operator, if there are no games, display a message
       ) : (
         <p>No games to display</p>
       )}

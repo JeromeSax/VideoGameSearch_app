@@ -6,7 +6,7 @@ const ReviewsDisplay = ({ reviews }) => {
       }
     return (
         <div>
-            <h1>Reviews</h1>
+            <h1 className='header-2'>Reviews</h1>
             <ul>
                 {reviews.map((review, index) => (
                     <li key={index}>
